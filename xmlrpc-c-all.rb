@@ -22,9 +22,8 @@ class XmlrpcC < Formula
                           "--prefix=#{prefix}"
 
     # xmlrpc-config.h cannot be found if only calling make install
-    system "make", "all"
-     system "make", "install"
-+    system "make", "-C", "tools", "install"
+    system "make"
+    system "make", "install"
   end
 
   test do
